@@ -1,20 +1,11 @@
-# Largest palindrome product
-largestvalue = None
-largestdiv = None
-palindromes = list()
+# Largest palindrome
 
-for i in range(10, 998001):
-    if i == (int(str(i)[::-1])):  # all palindromes to list
-        palindromes.append(i)
-
-for n in palindromes:
-    for i in range(100, 999):
-        if n % i == 0 and (len(str(n / i))) == 3:
-            largestvalue = n
-            largestdiv = i
-            break
-        else:
-            continue
+def compute():
+    ans = max(a * b
+              for a in range(100, 1000)
+              for b in range(100, 1000)
+              if str(a * b) == str(a * b)[::-1])
+    return str(ans)
 
 
-print(largestvalue, largestdiv)
+print(compute())
