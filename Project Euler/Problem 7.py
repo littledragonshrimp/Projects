@@ -6,7 +6,7 @@ import math
 def compute():
     count = 0
     lastprime = None
-    n = 1
+    n = 2
     while count != 10001:
         a = prime(n)
         if a != -1:
@@ -19,12 +19,13 @@ def compute():
 
 
 def prime(n):
-    for i in range(2, math.sqrt(n) + 1):
+    uprange = math.isqrt(n + 1)
+    for i in range(2, uprange):
         if n % i == 0:
             return (-1)
 
         else:
-            return (n)
+            return int(n)
 
 
 print(compute())
