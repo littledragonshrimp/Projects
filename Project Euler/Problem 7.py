@@ -19,7 +19,7 @@ def compute():
 
 
 def prime(n):
-    for i in range(2, math.sqrt(n) + 1):
+    for i in range(2, math.isqrt(n) + 1):
         if n % i == 0:
             return (-1)
 
