@@ -11,3 +11,5 @@ for line in inp:
         colpos = word.find(':')
         hour = word[:colpos + 1]
         time[hour] = time(hour, 0) + 1
+
+print(time.items())
