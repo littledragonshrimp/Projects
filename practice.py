@@ -1,18 +1,15 @@
-# returns min and max
+# messages per hour of the day
 
-numlist = list()
-inp = None
+inp = open('mbox-short.txt')
 
-while inp != 'done':
-    inp = input('Input a number: ')
-    try:
-        if inp == 'done':
-            continue
-        else:
-            num = int(inp)
-            numlist.append(num)
-    except TypeError:
-        print('Please input a number or "done".')
-        continue
+time = dict()
 
-print(max(numlist), 'is the max.', min(numlist), 'is the min')
+for line in inp:
+    line.rstrip()
+    if line.startswith('From') and line.endswith('2008'):
+        word = line.split()
+        colpos = word.find(':')
+        hour = word[:colpos + 1]
+        time[hour] = time(hour, 0) + 1
+
+print(time.items())
