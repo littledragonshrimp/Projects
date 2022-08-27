@@ -2,14 +2,21 @@
 
 inp = open('mbox-short.txt')
 
-time = dict()
+hist = dict()
+lhist = list()
 
 for line in inp:
-    line.rstrip()
+    line = line.rstrip()
     if line.startswith('From') and line.endswith('2008'):
         word = line.split()
-        colpos = word.find(':')
-        hour = word[:colpos + 1]
-        time[hour] = time(hour, 0) + 1
+        time = word[5]
+        hour = time[:2]
+        hist[hour] = hist.get(hour, 0) + 1
 
-print(time.items())
+for key, value in hist.items():
+    lhist.append((key, value))
+
+lhist.sort()
+
+for items in lhist:
+    print(items)
