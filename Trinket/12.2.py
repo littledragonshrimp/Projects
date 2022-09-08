@@ -15,14 +15,15 @@ except IndexError:
     print('Please enter a valid URL.')
     quit()
 
-count = 0
-string = None
+string = ''
 while True:
     data = sock.recv(512)
     if len(data) < 1:
         break
-    count += len(data)
-    print(data.decode(), end='')
-print(count)
+    string = string + str(data.decode().strip())
+
+content = re.findall('^But', string)
+print(content)
+print(len(string))
 
 sock.close()

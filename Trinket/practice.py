@@ -1,6 +1,5 @@
-import re
+string = 'The quick brown fox jumps over the lazy dog'
+test = 'attach'
+encode = string.encode()
+print(test.__add__(' ' + encode.decode()))
 
-hand = open('mbox.txt')
-hand = hand.read().rstrip()
-exp = re.findall('^X-', hand)
-print(exp)
