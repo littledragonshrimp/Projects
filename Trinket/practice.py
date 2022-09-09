@@ -1,18 +1,23 @@
-<<<<<<< HEAD
+import socket
 import re
 
-string = 'The quick brown fox jumps\n over the lazy dog'
-print(re.split('\n', string))
-=======
-<<<<<<< Updated upstream
-string = 'The quick brown fox jumps over the lazy dog'
-test = 'attach'
-encode = string.encode()
-print(test.__add__(' ' + encode.decode()))
+inp = input('Enter URL: ')
+host = re.findall('.+//(.+)/.+', inp)
 
-=======
-inp = 'http://data.pr4e.org/romeo.txt'
-host = inp.split('/')
-print(host[2])
->>>>>>> Stashed changes
->>>>>>> 2c3ebc96c7126a3656e1afbe6d1318ca1b2b9da9
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+try:
+    sock.connect((host[0], 80))
+    get = f'GET {inp} HTTP/1.0\r\n\r\n'.encode()
+    sock.send(get)
+except IndexError:
+    print('Please enter valid URL.')
+    quit()
+
+while True:
+    data = sock.recv(512)
+    if len(data) < 1:
+        break
+    print(data.decode(), end='')
+
+sock.close()
