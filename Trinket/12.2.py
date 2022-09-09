@@ -22,8 +22,10 @@ while True:
         break
     string = string + str(data.decode().strip())
 
-content = re.findall('^But', string)
-print(content)
-print(len(string))
+content = re.split('\r\n\r\n', string)
+content = content[1]
+
+print(f'\n{content[:3000]}')
+print(len(content))
 
 sock.close()
