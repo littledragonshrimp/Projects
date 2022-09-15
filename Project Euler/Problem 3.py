@@ -5,17 +5,8 @@ largeprime = None
 
 
 def compute():
-    for x in range(2, num):  # dictates range of number to test
-        if num % x == 0:  # tests if the number divisible is a perfect number
-            try:
-                for y in range(2, x):
-                    if x % y == 0:
-                        continue
-                    else:
-                        largeprime = x
-            except ValueError:
-                continue
-    print(largeprime)
+    for i in reversed(range(num / 2, num)):
+        
 
 
 print(compute())
