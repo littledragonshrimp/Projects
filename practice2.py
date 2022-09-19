@@ -1,5 +1,12 @@
-accounts = [[3, 3],
-            [3, 7],
-            [2, 7]]
+nums = [1, 2, 3, 4]
 
-print(max(map(sum, accounts)))
+
+def runningSum():
+    res = [nums[0]] + [0] * (len(nums) - 1)
+    return res
+    for i, num in enumerate(nums[1:]):
+        res[i + 1] += res[i] + num
+    return res
+
+
+print(runningSum())
