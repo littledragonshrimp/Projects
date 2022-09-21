@@ -1,12 +1,5 @@
-nums = [1, 2, 3, 4]
+x = {'x': 3, 'y': 4, 'z': 5}
+y = {"x": 3, "y": 1, "z": 1}
 
-
-def runningSum():
-    res = [nums[0]] + [0] * (len(nums) - 1)
-    return res
-    for i, num in enumerate(nums[1:]):
-        res[i + 1] += res[i] + num
-    return res
-
-
-print(runningSum())
+shared_items = {k: x[k] for k in x if k in y and x[k] == y[k]}
+print(shared_items)
