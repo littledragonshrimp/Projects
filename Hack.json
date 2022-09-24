@@ -1,0 +1,141 @@
+{
+    "food": [
+        {
+            "meat": [
+                {
+                    "beef": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+
+                        }
+                    ],
+                    "chicken": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "pork": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "veggie": [
+                {
+                    "cabbage": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "corn": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "cucumber": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "eggplant": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "spinach": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "mushroom": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "tomato": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "avocado": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+           "root": [
+            {
+                "potato": [
+                    {
+                        "date": "",  # date
+                        "quantity": "",  # quantity
+                        "exp_date": "",  # countdown
+                    }
+                ],
+                "carrot": [
+                    {
+                        "date": "",  # date
+                        "quantity": "",  # quantity
+                        "exp_date": "",  # countdown
+                    }
+                ],
+                "onion": [
+                    {
+                        "date": "",  # date
+                        "quantity": "",  # quantity
+                        "exp_date": "",  # countdown
+                    }
+                ]
+            }
+           ]
+        },
+        {
+            "seafood": [
+                {
+                    "Shellfish": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ],
+                    "Fish": [
+                        {
+                            "date": "",  # date
+                            "quantity": "",  # quantity
+                            "exp_date": "",  # countdown
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
