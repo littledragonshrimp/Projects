@@ -27,12 +27,7 @@ cursor = base.cursor()
 
 
 # JSON to python
-def processin():
-    data = '''{"foodsort": "meat",
-               "foodtype": "beef",
-               "date": "09.25.2022",
-               "quantity": "5"}'''
-
+def processin(data):
     retrieve = json.loads(data)
 
     retrieve["expdate"] = expirations[retrieve["foodtype"].upper()]
@@ -66,7 +61,7 @@ def calendar(n):
     day = date(int(n.split(".")[2]),
                int(n.split(".")[0]),
                int(n.split(".")[1]))
-    past = date(2022, 9, 26)
+    past = None
     if day != past:
         # edit database
         if past is None:
@@ -78,15 +73,7 @@ def calendar(n):
             expdatedelta = cursor.execute("""SELECT expiration FROM food""").fetchone()[0]
             cursor.execute("""UPDATE food SET expiration = ? - ?""",
                            (expdatedelta, delta.days))
-    # past = day
+    past = day
     cursor.execute("DELETE FROM food WHERE expiration < -3")
 
     base.commit()
-
-
-# processin()
-
-
-# processout()
-calendar("9.27.2022")
-# delete expired food
