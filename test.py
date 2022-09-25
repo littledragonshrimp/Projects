@@ -1,4 +1,3 @@
-from datetime import date
-
-today = date.today()
-print(today)
+import datetime
+y = datetime.date()
+print(y)
